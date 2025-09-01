@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="assets/img/fav-icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Main Title -->
+    <title>ClickRank || FAQ Page</title>
+    <!-- AOS Animation -->
+     <link rel="stylesheet" href="assets/css/aos.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Header Area Start Here -->
+    <section class="bg-primaryColor">
+        <div class="container xl:px-0 px-4">
+            <nav class="">
+                <div class="flex justify-between items-center py-7">
+                    <div>
+                        <a class="flex gap-2 items-center" href="index.html">
+                            <img class="flex-shrink-0" src="assets/img/logo.svg" alt="logo">
+                        </a>
+                    </div>
+                    <!-- Desktop menu -->
+                    <div class="hidden lg:block">
+                        <ul class="flex list-none items-center xl:w-[380px] w-full border border-white border-opacity-10 p-1 rounded-60">
+                            <li class="group flex items-center relative" id="featuresDropdown">
+                                <a href="feature.html" class="border border-transparent rounded-60 px-[18px] py-1.5 inline-flex items-center text-base font-Poppins font-normal leading-6 text-secondaryColor hover:border-secondaryColor hover:border-opacity-[4%] hover:bg-secondaryColor hover:bg-opacity-5 hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">
+                                    Features
+                                    <svg id="dropdownIcon" class="ml-2 transition-transform duration-200 group-hover:rotate-180" xmlns="http://www.w3.org/2000/svg" width="11" height="6" fill="none" viewBox="0 0 11 6">
+                                        <path d="M1.5 1L5.5 5L9.5 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </a>
+                                <!-- Dropdown content -->
+                                <ul id="dropdownMenu" class="absolute left-0 top-[2.5rem] w-44 py-1 list-none bg-secondaryColor rounded-md hidden z-10">
+                                    <li>
+                                        <a href="SEO.html" class="text-base font-medium font-Poppins block px-5 py-3 text-primaryColor hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">SEO Agency</a>
+                                    </li>
+                                    <li>
+                                        <a href="demo.html" class="text-base font-medium font-Poppins block px-5 py-3 text-primaryColor hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">Demo</a>
+                                    </li>
+                                    <li>
+                                        <a href="help-center.html" class="text-base font-medium font-Poppins block px-5 py-3 text-primaryColor hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">Help Center</a>
+                                    </li>
+                                    <li>
+                                        <a href="terms.html" class="text-base font-medium font-Poppins block px-5 py-3 text-primaryColor hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">Terms of Use</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" onclick="event.preventDefault()" class="text-base font-medium font-Poppins block px-5 py-3 text-primaryColor hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">Blog Single Page</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" onclick="event.preventDefault()" class="text-base font-medium font-Poppins block px-5 py-3 text-primaryColor hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">Contact Us</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="px-[18px] py-1.5 border border-transparent rounded-60 hover:border-secondaryColor hover:border-opacity-[4%] hover:bg-secondaryColor hover:bg-opacity-5 hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500"><a href="pricing.html" class="text-base font-Poppins font-normal leading-6 text-secondaryColor hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">Pricing</a></li>
+                            <li class="px-[18px] py-1.5 border border-transparent rounded-60 hover:border-secondaryColor hover:border-opacity-[4%] hover:bg-secondaryColor hover:bg-opacity-5 hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500"><a href="blog.html" class="text-base font-Poppins font-normal leading-6 text-secondaryColor hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">Blog</a></li>
+                            <li class="px-[18px] py-1.5 border border-transparent rounded-60 hover:border-secondaryColor hover:border-opacity-[4%] hover:bg-secondaryColor hover:bg-opacity-5 hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500"><a href="faq.html" class="text-base font-Poppins font-normal leading-6 text-secondaryColor hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">FAQs</a></li>
+                        </ul>
+                    </div>
+                    <div class="hidden lg:block">
+                        <a href="#" class="font-Poppins text-base font-normal text-secondaryColor hover:text-btnBg">LogIn</a>
+                        <a href="#" class="inline-block text-base font-normal font-Poppins text-secondaryColor px-[22px] py-2 bg-btnBg rounded-10 ml-5 hover:bg-purpleHover transition">Get Started</a>
+                    </div>
+                    <!-- Menu button for mobile -->
+                    <div class="flex items-center lg:hidden md:block">
+                        <button id="mobileMenuButton" class="border border-transparent bg-secondaryColor rounded-full p-2 focus:outline-none">
+                            <svg id="menuIcon" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="#070127">
+                                <path id="menuOpenIcon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                                <path id="menuCloseIcon" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <!-- Mobile Menu -->
+                <div id="mobileMenu" class="hidden rounded mx-4 mt-5 transition-opacity transition-height duration-500 ease-in-out overflow-hidden absolute inset-x-0 top-16 z-20 bg-white">
+                    <div class="md:px-6 px-4 py-6 space-y-1">
+                        <ul class="dropdown flex flex-col">
+                            <li class="group relative">
+                                <!-- Icon added here for the mobile menu -->
+                                <a href="javascript:void(0);" id="mobileFeaturesToggle" class=" pb-5 flex justify-between text-lg font-Poppins font-normal text-black hover:text-btnBg items-center">
+                                    Features
+                                    <svg id="mobileDropdownIcon" class="ml-2 transition-transform duration-200" xmlns="http://www.w3.org/2000/svg" width="11" height="6" fill="none" viewBox="0 0 11 6">
+                                        <path d="M1.5 1L5.5 5L9.5 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </a>
+                                <ul id="mobileDropdownMenu" class="hidden bg-bg mb-5 rounded-md shadow-2xl bg-secondaryColor">
+                                    <!-- Dropdown items -->
+                                    <li><a href="SEO.html" class="text-base font-normal font-Poppins block px-5 py-3 text-primaryColor hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">SEO Agency</a></li>
+                                    <li><a href="demo.html" class="text-base font-normal font-Poppins block px-5 py-3 text-primaryColor hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">Demo</a></li>
+                                    <li><a href="help-center.html" class="text-base font-normal font-Poppins block px-5 py-3 text-primaryColor hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">Help Center</a></li>
+                                    <li><a href="terms.html" class="text-base font-normal font-Poppins block px-5 py-3 text-primaryColor hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">Terms of use</a></li>
+                                    <li><a href="#" onclick="event.preventDefault()" class="text-base font-normal font-Poppins block px-5 py-3 text-primaryColor hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">Contact Us</a></li>
+                                    <li><a href="#" onclick="event.preventDefault()" class="text-base font-normal font-Poppins block px-5 py-3 text-primaryColor hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">Blog Single Page</a></li>
+                                </ul>
+                            </li>
+                            <li class="pb-6"><a href="pricing.html" class="text-lg font-Poppins font-normal text-black hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">Pricing</a></li>
+                            <li class="pb-6"><a href="blog.html"class="text-lg font-Poppins font-normal text-black hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">Blog</a></li>
+                            <li class=""><a href="faq.html" class="text-lg font-Poppins font-normal text-black hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">FAQs</a></li>
+                        </ul>
+                    </div>
+                    <div class="pt-10 md:block hidden mx-0 md:mx-auto text-center pb-10">
+                        <a href="" onclick="event.preventDefault()" class="font-Poppins text-base font-normal text-primaryColor hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">LogIn</a>
+                        <a href="" onclick="event.preventDefault()" class="inline-block text-base font-normal font-Poppins text-secondaryColor px-[22px] py-2 bg-btnBg rounded-10 ml-5 border border-btnBg hover:bg-white hover:border-primaryColor hover:text-primaryColor hover:transition hover:ease-in-out hover:duration-500">Get Started</a>
+                    </div>
+                </div>
+            </nav>   
+        </div>
+    </section>
+    <!-- Header Area End Here -->
+
+    <!-- FAQ Area Start Here -->
+    <section class="bg-testiBg md:pt-16 pt-10 xl:px-0 md:pb-32 pb-10">
+        <div class="container">
+            <div class="max-w-[594px] w-full mx-auto text-center">
+                <h1 class="font-Poppins text-primaryColor -tracking-[2px] font-semibold md:text-60xl text-34xl leading-42 md:leading-72">Questions? Answers.</h1>
+                <p class="font-Poppins font-normal text-base leading-8 text-center text-primaryColor text-opacity-70">Do you have any other questions?</p>
+            </div>
+            <div class="xl:w-[1070px] w-auto mx-auto">
+                <div class="md:mt-16 mt-7">
+                    <div>
+                        <div class="accordion-item cursor-pointer md:mb-7 mb-4 bg-secondaryColor rounded-[16px] py-7 md:px-7 px-4 shadow-faqshadow">
+                            <!-- First item open by default -->
+                            <div class="text-left flex justify-between items-start pb-2 lg:gap-0 gap-[18px]" onclick="toggleAccordion(this)">
+                                <h2 class="font-semibold font-Poppins md:text-24xl text-base md:leading-36 leading-8 -tracking-[0.5%] text-primaryColor">1.What is your refund policy?</h2>
+                                <div class="flex justify-center items-center">
+                                    <svg class="w-6 h-6 rounded-full border-2 border-primaryColor bg-mainBg transform transition-transform duration-700 ease-in-out icon-svg md:mt-0 mt-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path class="icon" d="M5 12h14" />
+                                    </svg> 
+                                </div>
+                                       
+                            </div>
+                            <div class="hidden pt-3 toggle">
+                                <p class="text-primaryColor text-opacity-70 md:text-base text-sm font-Poppins text-left font-normal leading-7">We offer a 7-day refund policy for all subscriptions. If you are not satisfied with Clickrank.ai within the first 7 days of purchase, you can request a full refund, no questions asked.</p>
+                            </div>
+                        </div>
+                  
+                        <div class="accordion-item cursor-pointer md:mb-7 mb-4 bg-secondaryColor rounded-[16px] py-7 md:px-7 px-4">
+                            <div class="text-left flex justify-between items-start pb-2 lg:gap-0 gap-[18px]" onclick="toggleAccordion(this)">
+                                <h2 class="font-semibold font-Poppins md:text-24xl text-base md:leading-36 leading-8 -tracking-[0.5%] text-primaryColor">2. What happens to my optimizations if I cancel my subscription?</h2>
+                                <div class="flex justify-center items-center">
+                                    <svg class="mt-2 bg-mainBg rounded-full border-2 border-primaryColor transform transition-transform duration-700 ease-in-out icon-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path class="icon" d="M12 5v14M5 12h14" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="hidden pt-3 toggle">
+                                <p class="text-primaryColor text-opacity-70 md:text-base text-sm font-Poppins text-left font-normal leading-7">If your subscription is terminated, all saved optimizations will be lost due to the disconnection of the JavaScript connection. We recommend exporting your data or applying changes permanently before ending your subscription.</p>
+                            </div>
+                        </div>
+                  
+                        <div class="accordion-item cursor-pointer md:mb-7 mb-4 bg-secondaryColor rounded-[16px] py-7 md:px-7 px-4">
+                            <div class="text-left flex justify-between items-start pb-2 lg:gap-0 gap-[18px]" onclick="toggleAccordion(this)">
+                                <h2 class="font-semibold font-Poppins md:text-24xl text-base md:leading-36 leading-8 -tracking-[0.5%] text-primaryColor">3. Can I register the same website on multiple accounts?</h2>
+                                <div class="flex justify-center items-center">
+                                    <svg class="mt-2 bg-mainBg rounded-full border-2 border-primaryColor transform transition-transform duration-700 ease-in-out icon-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path class="icon" d="M12 5v14M5 12h14" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="hidden pt-3 toggle">
+                                <p class="text-primaryColor text-opacity-70 md:text-base text-sm font-Poppins text-left font-normal leading-7">No, each website can only be registered once and cannot be accessed from two different Clickrank.ai accounts. This policy ensures the integrity and security of your website’s SEO data and settings.</p>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item cursor-pointer md:mb-7 mb-4 bg-secondaryColor rounded-[16px] py-7 md:px-7 px-4">
+                            <div class="text-left flex justify-between items-start pb-2 lg:gap-0 gap-[18px]" onclick="toggleAccordion(this)">
+                                <h2 class="font-semibold font-Poppins md:text-24xl text-base md:leading-36 leading-8 -tracking-[0.5%] text-primaryColor">4. Is my Google Search Console data safe with Clickrank.ai?</h2>
+                                <div class="flex justify-center items-center">
+                                    <svg class="mt-2 bg-mainBg rounded-full border-2 border-primaryColor transform transition-transform duration-700 ease-in-out icon-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path class="icon" d="M12 5v14M5 12h14" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="hidden pt-3 toggle">
+                                <p class="text-primaryColor text-opacity-70 md:text-base text-sm font-Poppins text-left font-normal leading-7">Yes, your Google Search Console data is completely safe. We do not store any of your data on our servers. All data is fetched directly into your user session from Google's servers, ensuring maximum privacy and security.</p>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item cursor-pointer md:mb-7 mb-4 bg-secondaryColor rounded-[16px] py-7 md:px-7 px-4">
+                            <div class="text-left flex justify-between items-start pb-2 lg:gap-0 gap-[18px]" onclick="toggleAccordion(this)">
+                                <h2 class="font-semibold font-Poppins md:text-24xl text-base md:leading-36 leading-8 -tracking-[0.5%] text-primaryColor">5. I have an issue with my account</h2>
+                                <div class="flex justify-center items-center">
+                                    <svg class="mt-2 bg-mainBg rounded-full border-2 border-primaryColor transform transition-transform duration-700 ease-in-out icon-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path class="icon" d="M12 5v14M5 12h14" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="hidden pt-3 toggle">
+                                <p class="text-primaryColor text-opacity-70 md:text-base text-sm font-Poppins text-left font-normal leading-7">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, vel veniam sit excepturi voluptates modi inventore aspernatur velit repellat similique.You can always contact our billing team through this email: billing@clickrank.ai</p>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item cursor-pointer md:mb-7 mb-4 bg-secondaryColor rounded-[16px] py-7 md:px-7 px-4">
+                            <div class="text-left flex justify-between items-start pb-2 lg:gap-0 gap-[18px]" onclick="toggleAccordion(this)">
+                                <h2 class="font-semibold font-Poppins md:text-24xl text-base md:leading-36 leading-8 -tracking-[0.5%] text-primaryColor">6. Can I cancel at anytime?</h2>
+                                <div class="flex justify-center items-center">
+                                    <svg class="mt-2 bg-mainBg rounded-full border-2 border-primaryColor transform transition-transform duration-700 ease-in-out icon-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path class="icon" d="M12 5v14M5 12h14" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="hidden pt-3 toggle">
+                                <p class="text-primaryColor text-opacity-70 md:text-base text-sm font-Poppins text-left font-normal leading-7">Yes you can alway cancel or pause your subscription at anytime through billing page under your profile.</p>
+                            </div>
+                        </div>
+                    </div>                  
+                </div>
+            </div>              
+        </div>
+    </section>
+    <!-- FAQ Area End Here -->
+
+    <!-- Footer Area Start Here -->
+    <section class="md:mb-14 mb-7">
+        <div class="container">
+            <div class="flex xl:flex-row flex-col justify-between xl:px-0 md:my-24 my-10">
+                <div class="md:w-72 w-full">
+                    <a href="index.html">
+                        <img class="md:w-auto w-40" src="assets/img/footer-logo.svg" alt="">
+                    </a>
+                    <p class="font-Poppins font-normal text-base leading-7 text-primaryColor text-opacity-60 pt-6">Boost Your SEO, Sit Back, and Relax with ClickRank.ai!</p>
+                </div>
+                <div class="flex md:flex-row flex-col justify-between md:gap-8 gap-2 xl:w-[730px] w-full xl:mt-0 mt-10">
+                    <div>
+                        <h5 class="font-Poppins font-semibold text-lg leading-8 text-primaryColor">Company</h5>
+                        <ul class="mt-6">
+                            <li><a href="index.html" class="font-Poppins font-normal md:text-lg text-base leading-7 text-primaryColor text-opacity-60 block hover:text-btnBg hover:transition-all hover:ease-in-out hover:duration-500">Home</a></li>
+                            <li><a href="#" onclick="event.preventDefault()" class="font-Poppins font-normal md:text-lg text-base leading-7 text-primaryColor text-opacity-60 md:pt-6 pt-4 block hover:text-btnBg hover:transition-all hover:ease-in-out hover:duration-500">About us</a></li>
+                            <li><a href="#" onclick="event.preventDefault()" class="font-Poppins font-normal md:text-lg text-base leading-7 text-primaryColor text-opacity-60 md:pt-6 pt-4 block hover:text-btnBg hover:transition-all hover:ease-in-out hover:duration-500">Features</a></li>
+                            <li><a href="faq.html" class="font-Poppins font-normal md:text-lg text-base leading-7 text-primaryColor text-opacity-60 md:pt-6 pt-4 block hover:text-btnBg hover:transition-all hover:ease-in-out hover:duration-500">FAQs</a></li>
+                        </ul>
+                    </div>
+                    <div class="md:mt-0 mt-5">
+                        <h5 class="font-Poppins font-semibold text-lg leading-8 text-primaryColor">Product</h5>
+                        <ul class="mt-6">
+                            <li><a href="pricing.html" class="font-Poppins font-normal md:text-lg text-base leading-7 text-primaryColor text-opacity-60 block hover:text-btnBg hover:transition-all hover:ease-in-out hover:duration-500">Pricing</a></li>
+                            <li><a href="#" onclick="event.preventDefault()" class="font-Poppins font-normal md:text-lg text-base leading-7 text-primaryColor text-opacity-60 md:pt-6 pt-4 block hover:text-btnBg hover:transition-all hover:ease-in-out hover:duration-500">Help Center</a></li>
+                            <li><a href="#" onclick="event.preventDefault()" class="font-Poppins font-normal md:text-lg text-base leading-7 text-primaryColor text-opacity-60 md:pt-6 pt-4 block hover:text-btnBg hover:transition-all hover:ease-in-out hover:duration-500">Blog</a></li>
+                            <li><a href="#" onclick="event.preventDefault()" class="font-Poppins font-normal md:text-lg text-base leading-7 text-primaryColor text-opacity-60 md:pt-6 pt-4 block hover:text-btnBg hover:transition-all hover:ease-in-out hover:duration-500">Careers</a></li>
+                        </ul>
+                    </div>
+                    <div class="md:mt-0 mt-5">
+                        <h5 class="font-Poppins font-semibold text-lg leading-8 text-primaryColor">Legal</h5>
+                        <ul class="mt-6">
+                            <li><a href="#" onclick="event.preventDefault()" class="font-Poppins font-normal md:text-lg text-base leading-7 text-primaryColor text-opacity-60 block hover:text-btnBg hover:transition-all hover:ease-in-out hover:duration-500">Terms of Use</a></li>
+                            <li><a href="#" onclick="event.preventDefault()" class="font-Poppins font-normal md:text-lg text-base leading-7 text-primaryColor text-opacity-60 md:pt-6 pt-4 block hover:text-btnBg hover:transition-all hover:ease-in-out hover:duration-500">Privacy Policy</a></li>
+                            <li><a href="#"  onclick="event.preventDefault()" class="font-Poppins font-normal md:text-lg text-base leading-7 text-primaryColor text-opacity-60 md:pt-6 pt-4 block hover:text-btnBg hover:transition-all hover:ease-in-out hover:duration-500">Link 03</a></li>
+                            <li><a href="#" onclick="event.preventDefault()" class="font-Poppins font-normal md:text-lg text-base leading-7 text-primaryColor text-opacity-60 md:pt-6 pt-4 block hover:text-btnBg hover:transition-all hover:ease-in-out hover:duration-500">Link 04</a></li>
+                        </ul>
+                    </div>
+                    <div class="md:w-auto w-full md:mt-0 mt-5">
+                        <h5 class="font-Poppins font-semibold text-lg leading-8 text-primaryColor">Key Resources</h5>
+                        <ul class="mt-6">
+                            <li><a href="#"  onclick="event.preventDefault()" class="font-Poppins font-normal md:text-lg text-base leading-7 text-primaryColor text-opacity-60 block hover:text-btnBg hover:transition-all hover:ease-in-out hover:duration-500">SEO Ranking Factors</a></li>
+                            <li><a href="#"  onclick="event.preventDefault()" class="font-Poppins font-normal md:text-lg text-base leading-7 text-primaryColor text-opacity-60 md:pt-6 pt-4 block hover:text-btnBg hover:transition-all hover:ease-in-out hover:duration-500">Onpage SEO Checklist</a></li>
+                            <li><a href="#"  onclick="event.preventDefault()" class="font-Poppins font-normal md:text-lg text-base leading-7 text-primaryColor text-opacity-60 md:pt-6 pt-4 block hover:text-btnBg hover:transition-all hover:ease-in-out hover:duration-500">SEO Glossary</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <hr class="w-full h-[1px] bg-primaryColor bg-opacity-10"/>
+            <div class="mt-9 xl:px-0 px-4">
+                <div class="flex md:flex-row flex-col justify-between items-center">
+                    <div>
+                        <p class="font-Poppins font-normal text-base leading-6 text-primaryColor text-opacity-50 text-center">&copy; clickrank.ai. All Rights Reserved.</p>
+                    </div>
+                    <div class="flex gap-3.5 lg:mt-0 mt-5">
+                        <a href="https://www.facebook.com/" target="_blank">
+                            <svg class="group border border-primaryColor border-opacity-20 bg-white rounded-full hover:bg-primaryColor hover:transition-all hover: ease-in-out hover:duration-500" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+                                <path d="M21.4758 18.8746L21.8908 16.341H19.2968V14.6969C19.2968 14.0039 19.659 13.3279 20.8209 13.3279H22V11.1711C22 11.1711 20.9301 11 19.9069 11C17.7708 11 16.3746 12.2136 16.3746 14.4103V16.3414H14V18.875H16.3746V25H19.2968V18.875L21.4758 18.8746Z" fill="black" class="group-hover:fill-white group-hover:transition-all group-hover: ease-in-out group-hover:duration-500"/>
+                            </svg>
+                        </a>
+                        
+                        <a href="https://www.instagram.com/" target="_blank">
+                            <svg class="group border border-primaryColor border-opacity-20 bg-white rounded-full hover:bg-primaryColor hover:transition-all hover: ease-in-out hover:duration-500" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+                                <path d="M18.0001 11C16.099 11 15.8606 11.0081 15.114 11.0421C14.3689 11.0761 13.86 11.1945 13.4148 11.3675C12.9544 11.5464 12.5641 11.7857 12.1749 12.1749C11.7857 12.564 11.5464 12.9545 11.3675 13.4148C11.1944 13.86 11.0761 14.3689 11.0421 15.114C11.008 15.8606 11 16.099 11 18.0001C11 19.9012 11.008 20.1396 11.0421 20.8863C11.0761 21.6313 11.1944 22.1402 11.3675 22.5854C11.5464 23.0458 11.7858 23.4361 12.1749 23.8253C12.5641 24.2145 12.9544 24.4539 13.4148 24.6328C13.86 24.8058 14.3689 24.9241 15.114 24.9581C15.8606 24.9922 16.099 25.0002 18.0001 25.0002C19.9012 25.0002 20.1396 24.9922 20.8863 24.9581C21.6313 24.9241 22.1402 24.8058 22.5854 24.6328C23.0458 24.4539 23.4361 24.2145 23.8253 23.8253C24.2145 23.4361 24.4539 23.0458 24.6328 22.5854C24.8058 22.1402 24.9241 21.6313 24.9581 20.8863C24.9922 20.1396 25.0002 19.9012 25.0002 18.0001C25.0002 16.099 24.9922 15.8606 24.9581 15.114C24.9241 14.3689 24.8058 13.86 24.6328 13.4148C24.4539 12.9545 24.2145 12.564 23.8253 12.1749C23.4361 11.7857 23.0458 11.5464 22.5854 11.3675C22.1402 11.1945 21.6313 11.0761 20.8863 11.0421C20.1396 11.0081 19.9012 11 18.0001 11ZM18.0001 12.2613C19.8692 12.2613 20.0906 12.2684 20.8288 12.3021C21.5113 12.3332 21.8819 12.4473 22.1286 12.5431C22.4553 12.6701 22.6885 12.8218 22.9335 13.0667C23.1784 13.3117 23.3301 13.5449 23.4571 13.8716C23.553 14.1183 23.667 14.489 23.6981 15.1715C23.7318 15.9096 23.739 16.131 23.739 18.0001C23.739 19.8692 23.7318 20.0906 23.6981 20.8288C23.667 21.5113 23.553 21.8819 23.4571 22.1286C23.3301 22.4553 23.1784 22.6885 22.9335 22.9335C22.6885 23.1784 22.4553 23.3301 22.1286 23.4571C21.8819 23.553 21.5113 23.667 20.8288 23.6981C20.0907 23.7318 19.8694 23.739 18.0001 23.739C16.1309 23.739 15.9095 23.7318 15.1715 23.6981C14.4889 23.667 14.1183 23.553 13.8717 23.4571C13.5449 23.3301 13.3117 23.1784 13.0668 22.9335C12.8218 22.6885 12.6701 22.4553 12.5431 22.1286C12.4473 21.8819 12.3332 21.5113 12.3021 20.8288C12.2684 20.0906 12.2613 19.8692 12.2613 18.0001C12.2613 16.131 12.2684 15.9096 12.3021 15.1715C12.3332 14.4889 12.4473 14.1183 12.5431 13.8717C12.6701 13.5449 12.8218 13.3117 13.0667 13.0668C13.3117 12.8218 13.5449 12.6701 13.8716 12.5431C14.1183 12.4473 14.489 12.3332 15.1715 12.3021C15.9096 12.2684 16.131 12.2613 18.0001 12.2613" fill="black" class="group-hover:fill-white group-hover:transition-all group-hover: ease-in-out group-hover:duration-500"/>
+                                <path d="M18.0004 20.3339C16.7117 20.3339 15.667 19.2892 15.667 18.0006C15.667 16.7118 16.7117 15.6672 18.0004 15.6672C19.2891 15.6672 20.3338 16.7118 20.3338 18.0006C20.3338 19.2892 19.2891 20.3339 18.0004 20.3339ZM18.0004 14.4059C16.0151 14.4059 14.4058 16.0152 14.4058 18.0006C14.4058 19.9858 16.0151 21.5952 18.0004 21.5952C19.9857 21.5952 21.5951 19.9858 21.5951 18.0006C21.5951 16.0152 19.9857 14.4059 18.0004 14.4059ZM22.5771 14.2639C22.5771 14.7278 22.201 15.1039 21.7371 15.1039C21.2732 15.1039 20.8971 14.7278 20.8971 14.2639C20.8971 13.7999 21.2732 13.4238 21.7371 13.4238C22.201 13.4238 22.5771 13.7999 22.5771 14.2639Z" fill="black" class="group-hover:fill-white group-hover:transition-all group-hover: ease-in-out group-hover:duration-500"/>
+                            </svg>
+                        </a>
+                        
+                        <a href="https://twitter.com/" target="_blank">
+                            <svg class="group border border-primaryColor border-opacity-20 bg-white rounded-full hover:bg-primaryColor hover:transition-all hover: ease-in-out hover:duration-500" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+                                <path d="M25 13.4205C24.4758 13.6655 23.9197 13.8263 23.3503 13.8975C23.9434 13.5226 24.3988 12.9289 24.6132 12.2215C24.0494 12.5744 23.4326 12.823 22.7893 12.9567C22.2654 12.3679 21.5189 12 20.6928 12C19.1065 12 17.8204 13.3564 17.8204 15.0293C17.8204 15.2668 17.8458 15.498 17.8948 15.7198C15.5077 15.5934 13.3913 14.3874 11.9746 12.5545C11.7274 13.002 11.5858 13.5224 11.5858 14.0775C11.5858 15.1285 12.0929 16.0557 12.8635 16.599C12.4074 16.584 11.9613 16.454 11.5625 16.2201C11.5624 16.2328 11.5624 16.2454 11.5624 16.2582C11.5624 17.726 12.5524 18.9504 13.8663 19.2287C13.4434 19.35 12.9997 19.3678 12.5693 19.2806C12.9347 20.4841 13.9955 21.3599 15.2523 21.3845C14.2693 22.1969 13.0308 22.6813 11.6852 22.6813C11.4533 22.6813 11.2247 22.6669 11 22.6389C12.2711 23.4985 13.7809 24 15.4029 24C20.6861 24 23.5751 19.3838 23.5751 15.3807C23.5751 15.2493 23.5723 15.1186 23.5668 14.9887C24.1291 14.56 24.6144 14.0289 25 13.4205Z" fill="black" class="group-hover:fill-white group-hover:transition-all group-hover: ease-in-out group-hover:duration-500"/>
+                            </svg>
+                        </a>
+                        
+                        <a href="https://www.linkedin.com/" target="_blank">
+                            <svg class="group border border-primaryColor border-opacity-20 bg-white rounded-full hover:bg-primaryColor hover:transition-all hover: ease-in-out hover:duration-500" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M16.2003 15.8783H18.8001V17.1733C19.1746 16.4285 20.135 15.7593 21.5777 15.7593C24.3434 15.7593 25 17.2419 25 19.9621V25H22.2V20.5816C22.2 19.0325 21.8255 18.1589 20.8721 18.1589C19.5498 18.1589 19.0003 19.1004 19.0003 20.5809V25H16.2003V15.8783ZM11.399 24.881H14.199V15.7593H11.399V24.881ZM14.6001 12.785C14.6002 13.0197 14.5537 13.2521 14.4632 13.4686C14.3727 13.6852 14.2401 13.8816 14.073 14.0464C13.7345 14.3828 13.2763 14.5712 12.799 14.57C12.3226 14.5697 11.8654 14.3818 11.5264 14.0471C11.3599 13.8817 11.2278 13.6851 11.1374 13.4685C11.0471 13.2519 11.0004 13.0197 11 12.785C11 12.3111 11.189 11.8575 11.5271 11.5229C11.8658 11.1877 12.3232 10.9998 12.7997 11C13.2771 11 13.7349 11.1883 14.073 11.5229C14.4104 11.8575 14.6001 12.3111 14.6001 12.785Z" fill="black" class="group-hover:fill-white group-hover:transition-all group-hover: ease-in-out group-hover:duration-500"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer Area End Here -->
+
+    <script>
+        function toggleAccordion(element) {
+        const items = document.querySelectorAll('.accordion-item');
+        const toggleContent = element.nextElementSibling;
+        const svgIcon = element.querySelector('svg');
+        const path = svgIcon.querySelector('.icon');
+
+        // Close all other accordion items
+        items.forEach(item => {
+            if (item !== element.parentElement) {
+            const content = item.querySelector('.toggle');
+            const icon = item.querySelector('.icon');
+            const svg = item.querySelector('svg');
+
+            content.style.maxHeight = null; // Reset max-height
+            content.classList.add('hidden'); // Hide content
+            svg.classList.remove('rotate-180');
+            icon.setAttribute('d', 'M12 5v14M5 12h14'); // Reset to plus icon
+            svg.classList.remove('bg-[#070127]');
+            svg.classList.add('bg-mainBg');
+            svg.setAttribute('stroke', 'currentColor'); // Reset stroke color
+            }
+        });
+
+        // Toggle the clicked accordion
+        if (toggleContent.classList.contains('hidden')) {
+            // Opening the content
+            toggleContent.classList.remove('hidden');
+            toggleContent.style.maxHeight = toggleContent.scrollHeight + "px"; // Set max-height to the scroll height
+            svgIcon.classList.add('rotate-180');
+
+            path.setAttribute('d', 'M5 12h14'); // Minus icon
+            svgIcon.classList.remove('bg-mainBg'); // Remove background mainBg
+            svgIcon.classList.add('bg-[#070127]'); // Set background to black
+            svgIcon.setAttribute('stroke', 'white'); // Icon color to white
+        } else {
+            // Closing the content
+            toggleContent.style.maxHeight = null; // Reset max-height
+            toggleContent.classList.add('hidden'); // Hide content
+            svgIcon.classList.remove('rotate-180');
+
+            path.setAttribute('d', 'M12 5v14M5 12h14'); // Plus icon
+            svgIcon.classList.remove('bg-[#070127]'); // Remove black background
+            svgIcon.classList.add('bg-mainBg'); // Add background mainBg
+            svgIcon.setAttribute('stroke', 'currentColor'); // Reset stroke color to default
+        }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+        const firstAccordion = document.querySelector('.accordion-item:first-child');
+        if (firstAccordion) {
+            const toggleContent = firstAccordion.querySelector('.toggle');
+            const svgIcon = firstAccordion.querySelector('svg');
+            const path = svgIcon.querySelector('.icon');
+
+            // Set styles for the first opened accordion item
+            toggleContent.classList.remove('hidden');
+            toggleContent.style.maxHeight = toggleContent.scrollHeight + "px"; // Set max-height for the first item
+            svgIcon.classList.add('bg-[#070127]'); // Set background to black
+            svgIcon.setAttribute('stroke', 'white'); // Set icon color to white
+            path.setAttribute('d', 'M5 12h14'); // Set to minus icon
+        }
+        });
+  
+    </script>
+
+
+    <script src="assets/js/alpine.min.js"  defer></script>
+
+    <!-- AOS Animation-->
+    <script src="assets/js/aos.js"></script>
+    <script src="assets/js/aos_script.js"></script>
+    <script src="assets/js/timeline.js"></script>
+    <script src="assets/js/script.js"></script>
+
+</body>
+</html>

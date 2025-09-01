@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="assets/img/fav-icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Main Title -->
+    <title>ClickRank</title>
+    <!-- AOS Animation -->
+     <link rel="stylesheet" href="assets/css/aos.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Header Area Start Here -->
+    <header class="relative bg-mainBg h-fit">
+        <div class="bg-primaryColor border-b border-b-secondaryColor  border-opacity-[0.07]">
+            <div class="container">
+                <nav class="">
+                    <div class="flex justify-between items-center py-7">
+                        <div>
+                            <a class="flex gap-2 items-center" href="index.html">
+                                <img class="flex-shrink-0" src="assets/img/logo.svg" alt="logo">
+                            </a>
+                        </div>
+                        <!-- Desktop menu -->
+                        <div class="hidden lg:block">
+                            <ul class="flex list-none items-center xl:w-[380px] w-full border border-white border-opacity-10 p-1 rounded-60">
+                                <li class="group flex items-center relative" id="featuresDropdown">
+                                    <a href="feature.html" class="border border-transparent rounded-60 px-[18px] py-1.5 inline-flex items-center text-base font-Poppins font-normal leading-6 text-secondaryColor hover:border-secondaryColor hover:border-opacity-[4%] hover:bg-secondaryColor hover:bg-opacity-5 hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">
+                                        Features
+                                        <svg id="dropdownIcon" class="ml-2 transition-transform duration-200 group-hover:rotate-180" xmlns="http://www.w3.org/2000/svg" width="11" height="6" fill="none" viewBox="0 0 11 6">
+                                            <path d="M1.5 1L5.5 5L9.5 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </a>
+                                    <!-- Dropdown content -->
+                                    <ul id="dropdownMenu" class="absolute left-0 top-[2.5rem] w-44 py-1 list-none bg-secondaryColor rounded-md hidden z-10">
+                                        <li>
+                                            <a href="SEO.html" class="text-base font-medium font-Poppins block px-5 py-3 text-primaryColor hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">SEO Agency</a>
+                                        </li>
+                                        <li>
+                                            <a href="demo.html" class="text-base font-medium font-Poppins block px-5 py-3 text-primaryColor hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">Demo</a>
+                                        </li>
+                                        <li>
+                                            <a href="help-center.html" class="text-base font-medium font-Poppins block px-5 py-3 text-primaryColor hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">Help Center</a>
+                                        </li>
+                                        <li>
+                                            <a href="terms.html" class="text-base font-medium font-Poppins block px-5 py-3 text-primaryColor hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">Terms of Use</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" onclick="event.preventDefault()" class="text-base font-medium font-Poppins block px-5 py-3 text-primaryColor hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">Blog Single Page</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" onclick="event.preventDefault()" class="text-base font-medium font-Poppins block px-5 py-3 text-primaryColor hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">Contact Us</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="px-[18px] py-1.5 border border-transparent rounded-60 hover:border-secondaryColor hover:border-opacity-[4%] hover:bg-secondaryColor hover:bg-opacity-5 hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500"><a href="pricing.html" class="text-base font-Poppins font-normal leading-6 text-secondaryColor hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">Pricing</a></li>
+                                <li class="px-[18px] py-1.5 border border-transparent rounded-60 hover:border-secondaryColor hover:border-opacity-[4%] hover:bg-secondaryColor hover:bg-opacity-5 hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500"><a href="blog.html" class="text-base font-Poppins font-normal leading-6 text-secondaryColor hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">Blog</a></li>
+                                <li class="px-[18px] py-1.5 border border-transparent rounded-60 hover:border-secondaryColor hover:border-opacity-[4%] hover:bg-secondaryColor hover:bg-opacity-5 hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500"><a href="faq.html" class="text-base font-Poppins font-normal leading-6 text-secondaryColor hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">FAQs</a></li>
+                            </ul>
+                        </div>
+                        <div class="hidden lg:block">
+                            <a href="#" class="font-Poppins text-base font-normal text-secondaryColor hover:text-btnBg">LogIn</a>
+                            <a href="#" class="inline-block text-base font-normal font-Poppins text-secondaryColor px-[22px] py-2 bg-btnBg rounded-10 ml-5 hover:bg-purpleHover transition">Get Started</a>
+                        </div>
+                        <!-- Menu button for mobile -->
+                        <div class="flex items-center lg:hidden md:block">
+                            <button id="mobileMenuButton" class="border border-transparent bg-secondaryColor rounded-full p-2 focus:outline-none">
+                                <svg id="menuIcon" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="#070127">
+                                    <path id="menuOpenIcon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                                    <path id="menuCloseIcon" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Mobile Menu -->
+                    <div id="mobileMenu" class="hidden rounded mx-4 mt-5 transition-opacity transition-height duration-500 ease-in-out overflow-hidden absolute inset-x-0 top-16 z-20 bg-white">
+                        <div class="md:px-6 px-4 py-6 space-y-1">
+                            <ul class="dropdown flex flex-col">
+                                <li class="group relative">
+                                    <!-- Icon added here for the mobile menu -->
+                                    <a href="javascript:void(0);" id="mobileFeaturesToggle" class=" pb-5 flex justify-between text-lg font-Poppins font-normal text-black hover:text-btnBg items-center">
+                                        Features
+                                        <svg id="mobileDropdownIcon" class="ml-2 transition-transform duration-200" xmlns="http://www.w3.org/2000/svg" width="11" height="6" fill="none" viewBox="0 0 11 6">
+                                            <path d="M1.5 1L5.5 5L9.5 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </a>
+                                    <ul id="mobileDropdownMenu" class="hidden bg-bg mb-5 rounded-md shadow-2xl bg-secondaryColor">
+                                        <!-- Dropdown items -->
+                                        <li><a href="SEO.html" class="text-base font-normal font-Poppins block px-5 py-3 text-primaryColor hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">SEO Agency</a></li>
+                                        <li><a href="demo.html" class="text-base font-normal font-Poppins block px-5 py-3 text-primaryColor hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">Demo</a></li>
+                                        <li><a href="help-center.html" class="text-base font-normal font-Poppins block px-5 py-3 text-primaryColor hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">Help Center</a></li>
+                                        <li><a href="terms.html" class="text-base font-normal font-Poppins block px-5 py-3 text-primaryColor hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">Terms of use</a></li>
+                                        <li><a href="#" onclick="event.preventDefault()" class="text-base font-normal font-Poppins block px-5 py-3 text-primaryColor hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">Contact Us</a></li>
+                                        <li><a href="#" onclick="event.preventDefault()" class="text-base font-normal font-Poppins block px-5 py-3 text-primaryColor hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">Blog Single Page</a></li>
+                                    </ul>
+                                </li>
+                                <li class="pb-6"><a href="pricing.html" class="text-lg font-Poppins font-normal text-black hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">Pricing</a></li>
+                                <li class="pb-6"><a href="blog.html"class="text-lg font-Poppins font-normal text-black hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">Blog</a></li>
+                                <li class=""><a href="faq.html" class="text-lg font-Poppins font-normal text-black hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">FAQs</a></li>
+                            </ul>
+                        </div>
+                        <div class="pt-10 md:block hidden mx-0 md:mx-auto text-center pb-10">
+                            <a href="" onclick="event.preventDefault()" class="font-Poppins text-base font-normal text-primaryColor hover:text-btnBg hover:transition hover:ease-in-out hover:duration-500">LogIn</a>
+                            <a href="" onclick="event.preventDefault()" class="inline-block text-base font-normal font-Poppins text-secondaryColor px-[22px] py-2 bg-btnBg rounded-10 ml-5 border border-btnBg hover:bg-white hover:border-primaryColor hover:text-primaryColor hover:transition hover:ease-in-out hover:duration-500">Get Started</a>
+                        </div>
+                    </div>
+                </nav>               
+            </div>
+        </div>
+        <!-- Banner Area Start Here -->
+        <div class="w-full bg-center bg-cover bg-no-repeat bg-primaryColor relative z-0" style="background-image: url('assets/img/banner-bg.svg');">
+            <div class="container xl:pb-[29rem] lg:pb-[25rem] md:pb-[18rem] pb-[8rem]">
+                <div class="max-w-988 mx-auto pt-[70px]">
+                    <div class="text-center">
+                        <div class="bg-headerBorder border-gradient-1 py-2 px-5 inline-block">
+                            <span class="block font-Poppins font-medium text-sm leading-5 bannerText">No Coding Required</span>
+                        </div>
+                        <h1 class="pt-5 font-Poppins font-semibold lg:text-70xl text-40xl leading-50 lg:leading-80 text-secondaryColor lg:-tracking-[3.5px]">Increase Your Organic Traffic in Minutes Not Months!</h1>
+                        <p class="md:w-538 mx-auto font-Poppins font-normal text-base leading-7 text-secondaryColor text-opacity-80 pt-4">Get More Impressions & Clicks From Google Without Lifting a Finger!</p>
+                        <div class="max-w-446 mx-auto flex flex-col md:flex-row md:mt-11 mt-7 gap-4">
+                            <a href="#" class="text-center group flex justify-center items-center gap-2 text-secondaryColor font-Poppins font-medium text-base leading-7 bg-btnBg rounded-12 py-4 px-[30px] hover:bg-purpleHover hover:transition hover:ease-in-out hover:duration-500">
+                                Start Your Trial
+                                <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 7H17M17 7L10.8462 1M17 7L10.8462 13" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="mt-0 group flex justify-center items-center gap-2 text-primaryColor text-opacity-60 font-Poppins font-medium text-base leading-7 bg-secondaryColor rounded-12 py-4 px-[30px] border border-secondaryColor hover:text-opacity-100 hover:transition hover:ease-in-out hover:duration-500">
+                                <svg width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 7L1.25482e-06 13.9282L1.8605e-06 0.0717964L12 7Z" fill="#6A677D" class="group-hover:fill-primaryColor group-hover:transition group-hover:ease-in-out group-hover:duration-500"/>
+                                </svg>
+                                Watch it in action
+                            </a>
+                        </div>
+                        <div class="flex md:items-center items-start gap-2 mt-6 justify-center">
+                            <img src="assets/img/check.svg" alt="">
+                            <p class="font-Poppins font-normal text-sm leading-5 text-secondaryColor">Free for 14 days - no credit card required.</p>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+        </div>
+        <!-- Banner Area End Here -->
+        <div class="relative xl:-mt-[25rem] lg:-mt-[20rem] md:-mt-[15rem] -mt-[6rem] xl:mx-0 mx-4">
+            <img class="mx-auto h-full object-contain" src="assets/img/homePage/dashboard.png" alt="">
+            <div class="absolute w-full lg:h-446 md:h-[380px] h-[85%] bottom-0" style="background-image: url('assets/img/homePage/overlay.png');"></div>
+        </div>
+    </header>
+    <!-- Header Area End Here -->
+
+    <!-- Tools Area Start Here -->
+    <section class="-mt-10">
+        <div class="">
+            <img class="absolute left-0 z-[999] lg:w-auto w-28" src="assets/img/homePage/tool-bg1.png" alt="">
+            <img class="absolute right-0 z-[999] lg:w-auto w-28" src="assets/img/homePage/tool-bg.png" alt="">
+        </div>
+        <div
+            class="container overflow-hidden">
+            <!-- moveing card will appear here -->
+            <div class="flex items-center lg:gap-10 gap-4 animate-loop-scroll2 relative">
+                <div class="flex xl:space-x-9 space-x-4 flex-shrink-0 whitespace-nowrap items-center">
+                    <img class="md:w-auto w-20" src="assets/img/homePage/promo/tool-1.png" alt="">
+                    <img class="md:w-auto w-20" src="assets/img/homePage/promo/tool-2.png" alt="">
+                    <img class="md:w-auto w-20" src="assets/img/homePage/promo/tool-7.png" alt="">
+                    <img class="md:w-auto w-20" src="assets/img/homePage/promo/tool-4.png" alt="">
+                    <img class="md:w-auto w-20" src="assets/img/homePage/promo/tool-5.png" alt="">
+                    <img class="md:w-auto w-20" src="assets/img/homePage/promo/tool-7.png" alt="">
+                    <img class="md:w-auto w-20" src="assets/img/homePage/promo/tool-4.png" alt="">
+                    <img class="md:w-auto w-20" src="assets/img/homePage/promo/tool-5.png" alt="">
+                    <img class="md:w-auto w-20" src="assets/img/homePage/promo/tool-6.png" alt="">
+                    <img class="md:w-auto w-20" src="assets/img/homePage/promo/tool-2.png" alt="">
+                    <img class="md:w-auto w-20" src="assets/img/homePage/promo/tool-3.png" alt="">
+                        
+                </div>
+                <div class="flex xl:space-x-9 space-x-4 flex-shrink-0 whitespace-nowrap">
+                    <img class="md:w-auto w-20" src="assets/img/homePage/promo/tool-2.png" alt="">
+                    <img class="md:w-auto w-20" src="assets/img/homePage/promo/tool-7.png" alt="">
+                    <img class="md:w-auto w-20" src="assets/img/homePage/promo/tool-4.png" alt="">
+                    <img class="md:w-auto w-20" src="assets/img/homePage/promo/tool-5.png" alt="">
+                    <img class="md:w-auto w-20" src="assets/img/homePage/promo/tool-6.png" alt="">
+                    <img class="md:w-auto w-20" src="assets/img/homePage/promo/tool-2.png" alt="">
+                    <img class="md:w-auto w-20" src="assets/img/homePage/promo/tool-3.png" alt="">
+                    <img class="md:w-auto w-20" src="assets/img/homePage/promo/tool-4.png" alt="">
+                    <img class="md:w-auto w-10" src="assets/img/homePage/promo/tool-7.png" alt="">
+                    <img class="md:w-auto w-20" src="assets/img/homePage/promo/tool-6.png" alt="">
+                    <img class="md:w-auto w-20" src="assets/img/homePage/promo/tool-4.png" alt="">
+                    <img class="md:w-auto w-20" src="assets/img/homePage/promo/tool-5.png" alt="">
+                    <img class="md:w-auto w-20" src="assets/img/homePage/promo/tool-6.png" alt="">
+                    <img class="md:w-auto w-20" src="assets/img/homePage/promo/tool-2.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Tools Area End Here -->
+
+    <!-- SEO Area Start Here -->
+    <section class="md:mt-32 mt-16">
+        <div class="container">
+            <div
+            class="max-w-845 mx-auto text-center">
+                 <div class="bg-borderBg border-gradient-2 inline-block py-2 px-5">
+                    <span class="text-gradient font-Poppins font-medium text-base leading-6">How It Works</span>
+                 </div>
+                 <h2 class="font-Poppins font-semibold md:text-60xl text-40xl leading-50 md:leading-72 text-primaryColor -tracking-[2px] pt-5">Struggling with SEO? Automate It!</h2>
+                 <p class="max-w-755 mx-auto font-Poppins text-base leading-7 text-primaryColor text-opacity-70 pt-4">Imagine a tool that updates your meta tags, image alt text, schema markups and Internal links for you. No more manual work just better SEO and better results.</p>
+            </div>
+            <div class="lg:mt-16 mt-7 flex lg:flex-row flex-col items-start justify-between xl:gap-[60px] gap-10">
+                <img class="xl:w-630 lg:w-1/2 w-full" src="assets/img/homePage/SEO.png" alt="">
+                <div class="">
+                    <h4 class="w-full xl:w-[475px] text-primaryColor font-Poppins font-semibold md:text-54xl text-36xl leading-42 md:leading-64">Get more done in less time</h4>
+                    <div class="mt-7"> 
+                        <div class="relative max-w-[590px]">
+                            <!-- Timeline Path -->
+                            <div id="timeline-line" class="absolute left-2.5 top-7 h-0 border-dashed border-testiBg"></div>
+                      
+                            <ul class="relative">
+                                <!-- Item 1 -->
+                                <li class="relative mb-5 pl-12">
+                                    <div class="absolute left-0 top-2 backdrop-blur-sm">
+                                        <img src="assets/img/ellipse.svg" alt="">
+                                    </div>
+                                    <div>
+                                        <h4 class="font-Poppins font-semibold md:text-22xl text-xl md:leading-42 leading-8 text-primaryColor">Optimize Meta Titles Automatically: </h4>
+                                        <p class="font-Poppins font-normal text-base leading-7 text-primaryColor text-opacity-60 pt-1.5">Keep your titles updated with high impact keywords that will increase your clicks and rankings.</p>
+                                    </div>
+                                </li>
+                      
+                                <!-- Item 2 -->
+                                <li class="relative mb-5 pl-12">
+                                    <div class="absolute left-0 top-2 backdrop-blur-sm">
+                                        <img src="assets/img/ellipse.svg" alt="">
+                                    </div>
+                                    <div>
+                                        <h4 class="font-Poppins font-semibold md:text-22xl text-xl md:leading-42 leading-8 text-primaryColor">Optimize Meta Descriptions for Higher CTR</h4>
+                                        <p class="font-Poppins font-normal text-base leading-7 text-primaryColor text-opacity-60 pt-1.5">Automatically generate engaging descriptions that capture attention and increase search CTR.</p>
+                                    </div>
+                                </li>
+                      
+                              <!-- Item 3 -->
+                                <li class="relative mb-5 pl-12">
+                                    <div class="absolute left-0 top-2 backdrop-blur-sm">
+                                      <img src="assets/img/ellipse.svg" alt="">
+                                    </div>
+                                    <div>
+                                        <h4 class="font-Poppins font-semibold md:text-22xl text-xl md:leading-42 leading-8 text-primaryColor">Improve Image SEO with Auto Alt Text</h4>
+                                        <p class="font-Poppins font-normal text-base leading-7 text-primaryColor text-opacity-60 pt-1.5">Generate accurate and SEO-friendly alt text for all images to boost your images rankings.</p>
+                                    </div>
+                                </li>
+                      
+                                <!-- Item 4 -->
+                                <li class="relative mb-5 pl-12">
+                                    <div class="absolute left-0 top-2 backdrop-blur-sm">
+                                      <img src="assets/img/ellipse.svg" alt="">
+                                    </div>
+                                    <div>
+                                        <h4 class="font-Poppins font-semibold md:text-22xl text-xl md:leading-42 leading-8 text-primaryColor">Automate Schema Markup</h4>
+                                        <p class="font-Poppins font-normal text-base leading-7 text-primaryColor text-opacity-60 pt-1.5">Automatically add structured data to your pages, helping search engines understand your content better and improving your chances of appearing in rich snippets and CTR.</p>
+                                    </div>
+                                </li>
+                                <!-- Item 5 -->
+                                <li id="last-item" class="relative mb-5 pl-12">
+                                    <div class="absolute left-0 top-2 backdrop-blur-sm">
+                                      <img src="assets/img/ellipse.svg" alt="">
+                                    </div>
+                                    <div>
+                                        <h4 class="font-Poppins font-semibold md:text-22xl text-xl md:leading-42 leading-8 text-primaryColor">Automate Internal Links</h4>
+                                        <p class="font-Poppins font-normal text-base leading-7 text-primaryColor text-opacity-60 pt-1.5">Easily Optimize Your Website Indexability Through Automated Internal Links That Uses AI For Anchor Text Suggestions.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div
+            class="flex md:flex-row flex-col md:justify-center gap-[18px] md:mt-20 mt-7">
+                <a href="#" class="group flex md:justify-normal justify-center items-center gap-3 text-secondaryColor font-Poppins font-medium text-base leading-7 border border-btnBg bg-btnBg rounded-12 py-4 px-[30px] hover:bg-purpleHover hover:transition hover:ease-in-out hover:duration-500">
+                    Get Started For Free
+                    <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 7H17M17 7L10.8462 1M17 7L10.8462 13" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+                <a href="#" class="group md:justify-normal justify-center text-center flex items-center gap-3 border border-btnBg border-opacity-60 text-btnBg text-opacity-60 font-Poppins font-medium text-base leading-7 bg-secondaryColor rounded-12 py-4 px-[30px] hover:text-opacity-100 hover:border-opacity-100 hover:transition hover:ease-in-out hover:duration-700">
+                    <svg width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 7L1.25482e-06 13.9282L1.8605e-06 0.0717964L12 7Z" fill="#8635fd99" class="group-hover:fill-btnBg"/>
+                    </svg>
+                    Watch it in action
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- SEO Area End Here -->
+
+    <!-- Features Area Start Here -->
+    <section class="md:my-32 my-16">
+        <div class="container">
+            <div class="max-w-705 mx-auto text-center">
+                <div class="bg-borderBg border-gradient-2 inline-block py-2 px-5">
+                   <span class="text-gradient font-Poppins font-medium text-base leading-6">Features</span>
+                </div>
+                <h2 class="font-Poppins font-semibold lg:text-60xl text-34xl leading-[44px] lg:leading-72 text-primaryColor -tracking-[2px] pt-5">SEO Automation is Here. Are You Ready?</h2>
+                <p class="font-Poppins text-base leading-7 text-primaryColor text-opacity-70 pt-4">Automatically generate and update titles and meta descriptions using advanced JavaScript that optimizes your pages for higher CTR and position.</p>
+            </div>
+            <div class="lg:mt-20 mt-7">
+                <div class="relative overflow-hidden rounded-14">
+                    <div class=" bg-card4 rounded-14 md:py-11 py-5 md:px-10 px-5">
+                        <div
+                        data-aos="zoom-in"
+                        data-aos-duration="1000"
+                        data-aos-offset="5"
+                        data-aos-delay="200"
+                        data-aos-once="true" class="flex lg:flex-row flex-col-reverse md:items-center justify-between lg:gap-14 gap-7">
+                            <div class="max-w-520 lg:text-left text-center">
+                                <h4 class="-tracking-[0.5px] text-primaryColor font-Poppins font-semibold md:text-30xl text-xl leading-32 md:leading-42">Introducing AI-Powered Content Audit: Optimize with One Click!</h4>
+                                <p class="md:pt-4 pt-2 font-Poppins font-normal md:text-base text-sm leading-6 md:leading-7 text-primaryColor text-opacity-60">Revitalize your content with our AI-driven, one-click feature that effortlessly integrates SEO keywords and enhances readability for better search engine performance</p>
+                            </div>
+                            <img class="w-full" src="assets/img/homePage/automation/automation-8.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex lg:flex-row flex-col justify-between lg:items-start gap-[30px] md:mt-8 mt-6">
+                <div class="bg-card1 rounded-14 max-w-740 md:max-w-full object-contain">
+                    <div
+                    data-aos="zoom-in"
+                    data-aos-duration="1000"
+                    data-aos-offset="5"
+                    data-aos-delay="200"
+                    data-aos-once="true"class=" md:py-10 py-5 md:px-9 px-5">
+                        <img class="w-full" src="assets/img/homePage/automation/automation-1.png" alt="">
+                        <div class="mx-auto">
+                            <h4 class="text-center text-primaryColor font-Poppins font-semibold md:text-30xl text-xl leading-6 md:leading-42">Optimize Meta Descriptions for Higher CTR</h4>
+                            <p class="max-w-566 mx-auto text-center pt-4 font-Poppins font-normal md:text-base text-sm leading-6 md:leading-7 text-primaryColor text-opacity-60">Automatically generate engaging descriptions that capture attention and increase search CTR.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class=" bg-card2 rounded-14 max-w-520 md:max-w-full object-contain ">
+                    <div
+                    data-aos="zoom-in"
+                    data-aos-duration="1000"
+                    data-aos-offset="5"
+                    data-aos-delay="200"
+                    data-aos-once="true"  class="md:py-10 py-5 md:px-8 px-5">
+                        <img class="w-full" src="assets/img/homePage/automation/automation-2.png" alt="">
+                        <div class="mx-auto mt-1.5">
+                            <h4 class=" text-center -tracking-[0.5px] text-primaryColor font-Poppins font-semibold md:text-30xl text-xl leading-6 md:leading-42">Optimize Titles Automatically</h4>
+                            <p class="max-w-446 mx-auto text-center pt-4 font-Poppins font-normal md:text-base text-sm leading-6 md:leading-7 text-primaryColor text-opacity-60">Keep your titles updated with high impact keywords that will increase your clicks and rankings.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="md:mt-8 mt-6 bg-card3 rounded-14 lg:py-[60px] md:py-10 py-5 md:px-10 px-5">
+                <div class="relative overflow-hidden">
+                    <div 
+                    data-aos="zoom-in"
+                    data-aos-duration="1000"
+                    data-aos-offset="5"
+                    data-aos-delay="200"
+                    data-aos-once="true" class="flex lg:flex-row flex-col-reverse md:items-center justify-between md:gap-14 gap-5">
+                        <div class="max-w-480 lg:text-left text-center">
+                            <h4 class="-tracking-[0.5px] text-primaryColor font-Poppins font-semibold md:text-30xl text-xl leading-6 md:leading-42">Automate Schema Markup</h4>
+                            <p class="md:pt-4 pt-2 font-Poppins font-normal md:text-base text-sm leading-6 md:leading-7 text-primaryColor text-opacity-60">Automatically add structured data to your pages, helping search engines understand your content better.</p>
+                        </div>
+                        <div class="">
+                            <img class="w-full" src="assets/img/homePage/automation/automation-3.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div
+            class="flex lg:flex-row flex-col justify-between lg:items-start md:gap-[30px] gap-7 md:mt-8 mt-6">
+                <div class="bg-card4 rounded-14 max-w-[570px] md:max-w-full object-contain">
+                    <div 
+                    data-aos="zoom-in"
+                    data-aos-duration="1000"
+                    data-aos-offset="5"
+                    data-aos-delay="200"
+                    data-aos-once="true"
+                     class=" md:py-10 py-5 md:px-8 px-5">
+                        <img class="w-full" src="assets/img/homePage/automation/automation-5.png" alt="">
+                        <div class="mx-auto mt-3">
+                            <h4 class=" text-center -tracking-[0.5px] text-primaryColor font-Poppins font-semibold md:text-30xl text-xl leading-6 md:leading-42">Automate Internal Links</h4>
+                            <p class="max-w-[490px] mx-auto text-center pt-4 font-Poppins font-normal md:text-base text-sm leading-6 md:leading-7 text-primaryColor text-opacity-60">Easily Optimize Your Website Indexability Through Automated Internal Links That Uses AI For Anchor Text Suggestions.</p>
+                        </div>
+                    </div>
+                </div>  
+                <div class="rounded-14 bg-card5 max-w-694 md:max-w-full object-contain">
+                    <div
+                    data-aos="zoom-in"
+                    data-aos-duration="1000"
+                    data-aos-offset="5"
+                    data-aos-delay="200"
+                    data-aos-once="true" class=" md:py-10 py-5 md:px-8 px-5">
+                        <img class="w-full" src="assets/img/homePage/automation/automation-6.png" alt="">
+                        <div class="mx-auto">
+                            <h4 class="text-center text-primaryColor font-Poppins font-semibold md:text-30xl text-xl leading-6 md:leading-42">Improve Image SEO with Auto Alt Text</h4>
+                            <p class="max-w-410 mx-auto text-center pt-4 font-Poppins font-normal md:text-base text-sm leading-6 md:leading-7 text-primaryColor text-opacity-60">Generate accurate and SEO-friendly alt text for all images to boost your images rankings.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Features Area End Here -->
+
+    <!-- Integration Area Start Here -->
+    <section class=" bg-cardBg relative xl:h-[866px] lg:h-988 md:h-[865px] h-[750px]">
+        <div class="">
+            <img class="xl:block hidden absolute xl:right-20 right-0 xl:bottom-0 z-[999]" src="assets/img/homePage/promo/tool-bg1.png" alt="">
+            <img class="xl:block hidden absolute xl:right-20 right-0 top-0 z-[999]" src="assets/img/homePage/promo/tool-bg.png" alt="">
+        </div>
+        <div class="container px-0">
+            <div class="flex xl:flex-row flex-col xl:gap-28 gap-10 lg:py-24 py-10 xl:items-center">
+                <div class="lg:w-630 w-full xl:px-0 px-[18px]">
+                    <div class="bg-secondaryColor inline-block py-2 px-5 rounded-md">
+                        <span class="text-gradient font-Poppins font-medium text-base leading-6">Integration</span>
+                    </div>
+                    <h2 class="font-Poppins font-semibold xl:text-60xl md:text-44xl text-34xl leading-40 md:leading-54 xl:leading-72 text-primaryColor -tracking-[2px] pt-5">Unlock SEO Potential Everywhere with Clickrank JS</h2>
+                    <p class="mx-auto font-Poppins text-base leading-7 text-primaryColor text-opacity-70 pt-4">Automatically generate and update titles and meta descriptions using advanced JavaScript that optimizes your pages for higher CTR and position.</p> 
+                </div>
+                <div
+                data-aos="zoom-in"
+                data-aos-duration="2000"
+                data-aos-offset="20"
+                data-aos-once="true"
+                class="overflow-hidden xl:h-[668px] lg:h-566 xl:flex xl:justify-between md:gap-6">
+                    <!-- moving card will appear here -->
+                    <div class="flex xl:flex-col xl:gap-5 md:gap-10 xl:animate-loop-scroll3 animate-loop-scroll5 relative">
+                        <div class="flex xl:flex-col xl:space-y-5 space-x-5 flex-shrink-0 items-center">
+                                <img class="md:w-auto w-28" src="assets/img/homePage/promo/tool-12.png" alt="">
+                                <img class="md:w-auto w-28" src="assets/img/homePage/promo/tool-10.png" alt="">
+                                <img class="md:w-auto w-28" src="assets/img/homePage/promo/tool-11.png" alt="">
+                                <img class="md:w-auto w-28" src="assets/img/homePage/promo/tool-13.png" alt="">
+                                <img class="md:w-auto w-28" src="assets/img/homePage/promo/tool-14.png" alt="">
+                            <!-- Add more images as needed -->
+                        </div>
+                        <div class="flex xl:flex-col xl:space-y-5 space-x-5 flex-shrink-0">
+                            <img class="md:w-auto w-28" src="assets/img/homePage/promo/tool-12.png" alt="">
+                                <img class="md:w-auto w-28" src="assets/img/homePage/promo/tool-10.png" alt="">
+                                <img class="md:w-auto w-28" src="assets/img/homePage/promo/tool-11.png" alt="">
+                                <img class="md:w-auto w-28" src="assets/img/homePage/promo/tool-13.png" alt="">
+                                <img class="md:w-auto w-28" src="assets/img/homePage/promo/tool-14.png" alt="">
+                                <img class="md:w-auto w-28" src="assets/img/homePage/promo/tool-12.png" alt="">
+                                <img class="md:w-auto w-28" src="assets/img/homePage/promo/tool-10.png" alt="">
+                                <img class="md:w-auto w-28" src="assets/img/homePage/promo/tool-11.png" alt="">
+                                <img class="md:w-auto w-28" src="assets/img/homePage/promo/tool-13.png" alt="">
+                                <img class="md:w-auto w-28" src="assets/img/homePage/promo/tool-14.png" alt="">
+                            <!-- Add more images as needed -->
+                        </div>
+                    </div>
+                    <div class="flex xl:flex-col xl:gap-5 md:gap-10 xl:animate-loop-scroll4 animate-loop-scroll6 relative xl:mt-0 md:mt-5">
+                        <div class="flex xl:flex-col xl:space-y-5 space-x-5 flex-shrink-0 items-center">
+                                <img class="md:w-auto w-28" src="assets/img/homePage/promo/tool-9.png" alt="">
+                                <img class="md:w-auto w-28" src="assets/img/homePage/promo/tool-10.png" alt="">
+                                <img class="md:w-auto w-28" src="assets/img/homePage/promo/tool-11.png" alt="">
+                                <img class="md:w-auto w-28" src="assets/img/homePage/promo/tool-16.png" alt="">
+                                <img class="md:w-auto w-28" src="assets/img/homePage/promo/tool-12.png" alt="">
+                                <img class="md:w-auto w-28" src="assets/img/homePage/promo/tool-17.png" alt="">
+                                <img class="md:w-auto w-28" src="assets/img/homePage/promo/tool-14.png" alt="">
+                                <img class="md:w-auto w-28" src="assets/img/homePage/promo/tool-13.png" alt="">
+                                <img class="md:w-auto w-28" src="assets/img/homePage/promo/tool-15.png" alt="">
+                                <img class="md:w-auto w-28" src="assets/img/homePage/promo/tool-11.png" alt="">
+                                <img class="md:w-auto w-28" src="assets/img/homePage/promo/tool-10.png" alt="">
+                            <!-- Add more images as needed -->
+                        </div>
+                        <div class="flex xl:flex-col xl:space-y-5 space-x-5 flex-shrink-0">
+                            <img class="md:w-auto w-28" src="assets/img/homePage/promo/tool-16.png" alt="">
+                                <img class="md:w-auto w-28" src="assets/img/homePage/promo/tool-17.png" alt="">
+                                <img class="md:w-auto w-28" src="assets/img/homePage/promo/tool-9.png" alt="">
+                                <img class="md:w-auto w-28" src="assets/img/homePage/promo/tool-10.png" alt="">
+                                <img class="md:w-auto w-28" src="assets/img/homePage/promo/tool-13.png" alt="">
+                                <img class="md:w-auto w-28" src="assets/img/homePage/promo/tool-14.png" alt="">
+                                <img class="md:w-auto w-28" src="assets/img/homePage/promo/tool-15.png" alt="">
+                                <img class="md:w-auto w-28" src="assets/img/homePage/promo/tool-16.png" alt="">
+                                <img class="md:w-auto w-28" src="assets/img/homePage/promo/tool-17.png" alt="">
+                                <img class="md:w-auto w-32" src="assets/img/homePage/promo/tool-14.png" alt="">
+                            <!-- Add more images as needed -->
+                        </div>
+                    </div>
+                    <div class="flex xl:flex-col xl:gap-5 md:gap-10 xl:animate-loop-scroll3 animate-loop-scroll5 relative xl:mt-0 md:mt-5">
+                        <div class="flex xl:flex-col xl:space-y-5 space-x-5 flex-shrink-0 items-center">
+                            <img class="md:w-auto w-28" src="assets/img/homePage/promo/tool-17.png" alt="">
+                            <img class="md:w-auto w-28" src="assets/img/homePage/promo/tool-16.png" alt="">
+                            <img class="md:w-auto w-28" src="assets/img/homePage/promo/tool-11.png" alt="">
+                            <img class="md:w-auto w-28" src="assets/img/homePage/promo/tool-13.png" alt="">
+                            <img class="md:w-auto w-28" src="assets/img/homePage/promo/tool-12.png" alt="">
+                            <img class="md:w-auto w-28" src="assets/img/homePage/promo/tool-10.png" alt="">
+                            <img class="md:w-auto w-28" src="assets/img/homePage/promo/tool-13.png" alt="">
+                            <img class="md:w-auto w-28" src="assets/img/homePage/promo/tool-14.png" alt="">
+                            <img class="md:w-auto w-28" src="assets/img/homePage/promo/tool-15.png" alt="">
+                            <!-- Add more images as needed -->
+                        </div>
+                        <div class="flex xl:flex-col xl:space-y-5 space-x-5 flex-shrink-0">
+                            <img class="md:w-auto w-28" src="assets/img/homePage/promo/tool-10.png" alt="">
+                                <img class="md:w-auto w-28" src="assets/img/homePage/promo/tool-9.png" alt="">
+                                <img class="md:w-auto w-28" src="assets/img/homePage/promo/tool-15.png" alt="">
+                                <img class="md:w-auto w-28" src="assets/img/homePage/promo/tool-13.png" alt="">
+                                <img class="md:w-auto w-28" src="assets/img/homePage/promo/tool-14.png" alt="">
+                                <img class="md:w-auto w-28" src="assets/img/homePage/promo/tool-12.png" alt="">
+                                <img class="md:w-auto w-28" src="assets/img/homePage/promo/tool-17.png" alt="">
+                                <img class="md:w-auto w-28" src="assets/img/homePage/promo/tool-15.png" alt="">
+                                <img class="md:w-auto w-28" src="assets/img/homePage/promo/tool-13.png" alt="">
+                                <img class="md:w-auto w-28" src="assets/img/homePage/promo/tool-14.png" alt="">
+                            <!-- Add more images as needed -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Integration Area Start Here -->
+
+
+    <!-- Solution Area Start Here -->
+    <section class="lg:mt-32 mt-16">
+        <div class="container">
+            <div class="max-w-845 mx-auto text-center">
+                <div class="bg-borderBg border-gradient-2 inline-block py-2 px-5">
+                   <span class="text-gradient font-Poppins font-medium text-base leading-6">Solution</span>
+                </div>
+                <h2 class="font-Poppins font-semibold md:text-60xl text-34xl leading-42 md:leading-72 text-primaryColor -tracking-[2px] pt-5">SEO Automation Made Easy</h2>
+                <p class="mx-auto font-Poppins text-base leading-7 text-primaryColor text-opacity-70 pt-4">Get real results using our SEO automation solution.</p>
+           </div>
+            <div 
+                class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:gap-[30px] gap-5 lg:mt-16 mt-7">
+                <div>
+                   <img class="w-full" src="assets/img/homePage/solution/integration.png" alt="">
+                   <div class="lg:mt-8 mt-4 md:text-left text-center">
+                       <h4 class="font-Poppins font-semibold text-26xl leading-36 text-primaryColor">Quick Integration</h4>
+                       <p class="pt-3.5 font-Poppins font-normal text-sm leading-6 text-primaryColor text-opacity-70">Seamlessly integrate with all major platforms using js code, ensuring your SEO strategy is always ahead.</p>
+                   </div>
+                </div>
+               <div>
+                   <img class="w-full" src="assets/img/homePage/solution/flexible.png" alt="">
+                   <div class="lg:mt-8 mt-4 md:text-left text-center">
+                       <h4 class="font-Poppins font-semibold text-26xl leading-36 text-primaryColor">Extremely Flexible</h4>
+                       <p class="pt-3.5 font-Poppins font-normal text-sm leading-6 text-primaryColor text-opacity-70">Clickrank let you optimize titles, meta descriptions, alt texts, and schema markups with 1 click.</p>
+                   </div>
+               </div>
+               <div>
+                   <img class="w-full" src="assets/img/homePage/solution/analytics.png" alt="">
+                   <div class="lg:mt-8 mt-4 md:text-left text-center">
+                       <h4 class="font-Poppins font-semibold text-26xl leading-36 text-primaryColor">Detailed Analytics</h4>
+                       <p class="pt-3.5 font-Poppins font-normal text-sm leading-6 text-primaryColor text-opacity-70">Gain valuable insights with detailed analytics that help you monitor your optimizations results.</p>
+                   </div>
+               </div>
+            </div>
+        </div>
+    </section>
+    <!-- Solution Area End Here -->
+
+    <!-- Boost Area Start Here -->
+    <section class="xl:mt-36 mt-16 bg-cardBg">
+        <div class="container lg:pb-[20%] pb-[30%]">
+            <div class="lg:pt-16 pt-10 max-w-845 mx-auto">
+                <h2  class="font-Poppins font-semibold md:text-60xl text-34xl leading-42 md:leading-72 text-primaryColor -tracking-[2px] text-center">Boost Your SEO with Google Search Console Insights!</h2>
+                <p class="max-w-755 mx-auto text-center pt-4 font-Poppins font-normal text-base leading-7 text-primaryColor text-opacity-60">Use real data from Google Search Console to fine-tune your SEO game. Optimize titles, descriptions, schema, and alt text effortlessly for better visibility and higher clicks.</p>
+            </div>
+            <div class="text-center flex md:flex-row flex-col justify-center md:gap-[18px] gap-1 md:mt-11 mt-7">
+                <a href="#" class="group flex md:justify-normal justify-center items-center gap-2 text-secondaryColor font-Poppins font-medium text-base leading-7 bg-btnBg rounded-12 py-4 px-[30px] hover:bg-purpleHover hover:transition hover:ease-in-out hover:duration-500">
+                    Connect Search Console
+                    <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 7H17M17 7L10.8462 1M17 7L10.8462 13" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+                <a href="#" class="md:mt-0 mt-4 group flex md:justify-normal justify-center items-center gap-2 text-primaryColor text-opacity-60 font-Poppins font-medium text-base leading-7 bg-secondaryColor rounded-12 py-4 px-[30px] border border-secondaryColor hover:text-opacity-100 hover:transition hover:ease-in-out hover:duration-500">
+                    <svg width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 7L1.25482e-06 13.9282L1.8605e-06 0.0717964L12 7Z" fill="#6A677D" class="group-hover:fill-primaryColor group-hover:transition group-hover:ease-in-out group-hover:duration-500"/>
+                    </svg>
+                    See How to Connect
+                </a>
+            </div>
+        </div>
+        <div class="bg-center bg-cover bg-no-repeat relative z-0 lg:py-[13%] py-[9%]" style="background-image: url('assets/img/homePage/dash-bg.svg');">
+            <img class="absolute left-1/2 bottom-0 transform -translate-x-1/2 lg:max-w-full w-[90%]" src="assets/img/homePage/dash.png" alt="">
+        </div>
+    </section>
+    <!-- Boost Area End Here -->
+
+
+    <!-- Testimonial Area Start Here -->
+    <section class="lg:py-32 py-20 bg-testiBg">
+        <div class="container xl:px-0 px-4">
+            <div class="max-w-755 mx-auto text-center">
+                <div class="bg-borderBg border-gradient-2 inline-block py-2 px-5">
+                   <span class="text-gradient font-Poppins font-medium text-base leading-6">Testimonials</span>
+                </div>
+                <h2 class="font-Poppins font-semibold md:text-60xl text-34xl leading-42 md:leading-72 text-primaryColor -tracking-[2px] pt-5">What our customer says about us</h2>
+            </div>
+            <div class="lg:mt-20 mt-10 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-[30px]">
+                <div class="bg-secondaryColor py-7 px-6 rounded-20 shadow-testibox">
+                    <p class="font-Poppins font-normal text-base leading-7 -tracking-[0.5%]">“Lorem ipsum dolor sit amet consecte. Sed id erat nibh viverra quis at. Diam nulla sagittis eget libero auctor amet turpis commodo. Dolor hac nun.”</p>
+                    <div class="flex gap-4 mt-14 items-center">
+                        <img src="assets/img/homePage/client/client-1.png" alt="">
+                        <h4 class="text-primaryColor font-Poppins font-medium text-lg leading-6">Sarah Taylor<span class="block text-primaryColor font-normal text-sm text-opacity-60">CEO & Founder, GDN</span></h4>
+                    </div>
+                </div>
+                <div class="bg-secondaryColor py-7 px-6 rounded-20 shadow-testibox">
+                    <p class="font-Poppins font-normal text-base leading-7 -tracking-[0.5%]">“Lorem ipsum dolor sit amet consecte. Sed id erat nibh viverra quis at. Diam nulla sagittis eget libero auctor amet turpis commodo. Dolor hac nun.”</p>
+                    <div class="flex gap-4 mt-14 items-center">
+                        <img src="assets/img/homePage/client/client-7.png" alt="">
+                        <h4 class="text-primaryColor font-Poppins font-medium text-lg leading-6">Sarah Taylor<span class="block text-primaryColor font-normal text-sm text-opacity-60">CEO & Founder, GDN</span></h4>
+                    </div>
+                </div>
+                <div class="bg-secondaryColor shadow-testibox py-7 px-6 rounded-20 lg:row-span-2 row-span-1">
+                    <p class="font-Poppins font-normal text-base leading-7 -tracking-[0.5%]">“Lorem ipsum dolor sit amet consecte. Sed id erat nibh viverra quis at. Diam nulla sagittis eget libero auctor amet turpis commodo. Dolor hac nun. Lorem ipsum dolor sit amet consecte. Sed id erat nibh viverra quis at. Diam nulla sagittis eget libero auctor amet turpis commodo. Dolor hac nun.”</p>
+                    <div class="flex gap-4 lg:mt-[285px] mt-14 items-center">
+                        <img src="assets/img/homePage/client/client-6.png" alt="">
+                        <h4 class="text-primaryColor font-Poppins font-medium text-lg leading-6">Sarah Taylor<span class="block text-primaryColor font-normal text-sm text-opacity-60">CEO & Founder, GDN</span></h4>
+                    </div>
+                </div>
+                <div class="bg-btnBg py-7 px-6 rounded-20 lg:row-span-2 row-span-1">
+                    <p class="font-Poppins font-normal text-base leading-7 -tracking-[0.5%] text-secondaryColor">“Lorem ipsum dolor sit amet consecte. Sed id erat nibh viverra quis at. Diam nulla sagittis eget libero auctor amet turpis commodo. Dolor hac nun. Lorem ipsum dolor sit amet consecte. Sed id erat nibh viverra quis at. Diam nulla sagittis eget libero auctor amet turpis commodo. Dolor hac nun.”</p>
+                    <div class="flex gap-4 lg:mt-[285px] mt-14 items-center">
+                        <img src="assets/img/homePage/client/client-4.png" alt="">
+                        <h4 class="text-secondaryColor font-Poppins font-medium text-lg leading-6">Sarah Taylor<span class="block text-secondaryColor text-opacity-50 font-normal text-sm">CEO & Founder, GDN</span></h4>
+                    </div>
+                </div>
+                <div class="bg-secondaryColor shadow-testibox py-7 px-6 rounded-20">
+                    <p class="font-Poppins font-normal text-base leading-7 -tracking-[0.5%]">“Lorem ipsum dolor sit amet consecte. Sed id erat nibh viverra quis at. Diam nulla sagittis eget libero auctor amet turpis commodo. Dolor hac nun.”</p>
+                    <div class="flex gap-4 mt-14 items-center">
+                        <img src="assets/img/homePage/client/client-5.png" alt="">
+                        <h4 class="text-primaryColor font-Poppins font-medium text-lg leading-6">Sarah Taylor<span class="block text-primaryColor font-normal text-sm text-opacity-60">CEO & Founder, GDN</span></h4>
+                    </div>
+                </div>
+                <div class="bg-secondaryColor shadow-testibox py-7 px-6 rounded-20">
+                    <p class="font-Poppins font-normal text-base leading-7 -tracking-[0.5%]">“Lorem ipsum dolor sit amet consecte. Sed id erat nibh viverra quis at. Diam nulla sagittis eget libero auctor amet turpis commodo. Dolor hac nun.”</p>
+                    <div class="flex gap-4 mt-14 items-center">
+                        <img src="assets/img/homePage/client/client-3.png" alt="">
+                        <h4 class="text-primaryColor font-Poppins font-medium text-lg leading-6">Sarah Taylor<span class="block text-primaryColor font-normal text-sm text-opacity-60">CEO & Founder, GDN</span></h4>
+                    </div>
+                </div>
+                <div class="bg-secondaryColor shadow-testibox py-7 px-6 rounded-20">
+                    <p class="font-Poppins font-normal text-base leading-7 -tracking-[0.5%]">“Lorem ipsum dolor sit amet consecte. Sed id erat nibh viverra quis at. Diam nulla sagittis eget libero auctor amet turpis commodo. Dolor hac nun.”</p>
+                    <div class="flex gap-4 mt-14 items-center">
+                        <img src="assets/img/homePage/client/client-2.png" alt="">
+                        <h4 class="text-primaryColor font-Poppins font-medium text-lg leading-6">Sarah Taylor<span class="block text-primaryColor font-normal text-sm text-opacity-60">CEO & Founder, GDN</span></h4>
+                    </div>
+                </div>
+            </div>
+            <div class="md:w-fit w-full mx-auto lg:mt-24 mt-10">
+                <a href="#" class="group flex md:justify-normal justify-center items-center gap-3 text-primaryColor font-Poppins font-medium text-base leading-7 border border-primaryColor bg-secondaryColor rounded-12 py-4 px-[30px] hover:bg-btnBg hover:border-btnBg hover:text-secondaryColor hover:transition hover:ease-in-out hover:duration-500">
+                    View All Testimonails
+                    <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 7H17M17 7L10.8462 1M17 7L10.8462 13" stroke="#070127" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-hover:stroke-secondaryColor group-hover:transition group-hover:ease-in-out group-hover:duration-500"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- Testimonial Area End Here -->
+
+    <!-- Promo Area Start Here -->
+    <section class="w-full bg-center bg-cover bg-no-repeat bg-primaryColor relative" style="background-image: url('assets/img/banner-bg.svg');">
+        <div class="absolute bg-primaryColor top-0 left-0 right-0 z-0 w-full h-full bg-opacity-30 pointer-events-none">  
+        </div>
+        <div class="container xl:px-0 px-4">
+            <div class="lg:py-32 md:py-20 py-16 relative z-10">
+                <div class="max-w-[794px] mx-auto text-center">
+                    <div class="bg-headerBorder border-gradient-1 py-2 px-5 inline-block">
+                        <span class="block font-Poppins font-medium text-sm leading-5 bannerText">Get Started Now</span>
+                    </div>
+                    <h1 class="pt-5 font-Poppins font-semibold md:text-60xl text-34xl leading-42 md:leading-72 text-secondaryColor -tracking-[2px]">Start Growing Your Organic Traffic Today!</h1>
+                    <div class="flex md:flex-row flex-col justify-center mt-10 gap-[18px]">
+                        <a href="#" class="group flex md:justify-normal justify-center items-center gap-2 text-secondaryColor font-Poppins font-medium text-base leading-7 bg-btnBg rounded-12 py-4 px-[30px] hover:bg-purpleHover hover:transition hover:ease-in-out hover:duration-500">
+                            Get srarted - it's free
+                            <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 7H17M17 7L10.8462 1M17 7L10.8462 13" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="group flex md:justify-normal justify-center items-center gap-3 text-secondaryColor text-opacity-60 font-Poppins font-medium text-base leading-7 border border-secondaryColor border-opacity-60 rounded-[12px] py-4 px-[30px] hover:text-opacity-100 hover:border-opacity-100 hover:transition hover:ease-in-out hover:duration-500">
+                            Discover Pricing
+                            <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 7H17M17 7L10.8462 1M17 7L10.8462 13" stroke="#ffffff99" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-hover:stroke-secondaryColor group-hover:transition group-hover:ease-in-out group-hover:duration-500"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </section>    
+    <!-- Promo Area End Here -->
+
+    <!-- Footer Area Start Here -->
+    <section class="md:mb-14 mb-7">
+        <div class="container">
+            <div class="flex xl:flex-row flex-col justify-between xl:px-0 md:my-24 my-10">
+                <div class="md:w-72 w-full">
+                    <a href="index.html">
+                        <img class="md:w-auto w-40" src="assets/img/footer-logo.svg" alt="">
+                    </a>
+                    <p class="font-Poppins font-normal text-base leading-7 text-primaryColor text-opacity-60 md:pt-6 pt-3">Boost Your SEO, Sit Back, and Relax with ClickRank.ai!</p>
+                </div>
+                <div class="flex md:flex-row flex-col justify-between md:gap-8 gap-2 xl:w-[730px] w-full xl:mt-0 mt-10">
+                    <div>
+                        <h5 class="font-Poppins font-semibold text-lg leading-8 text-primaryColor">Company</h5>
+                        <ul class="mt-6">
+                            <li><a href="index.html" class="font-Poppins font-normal md:text-lg text-base leading-7 text-primaryColor text-opacity-60 block hover:text-btnBg hover:transition-all hover:ease-in-out hover:duration-500">Home</a></li>
+                            <li><a href="#" onclick="event.preventDefault()" class="font-Poppins font-normal md:text-lg text-base leading-7 text-primaryColor text-opacity-60 md:pt-6 pt-4 block hover:text-btnBg hover:transition-all hover:ease-in-out hover:duration-500">About us</a></li>
+                            <li><a href="feature.html" class="font-Poppins font-normal md:text-lg text-base leading-7 text-primaryColor text-opacity-60 md:pt-6 pt-4 block hover:text-btnBg hover:transition-all hover:ease-in-out hover:duration-500">Features</a></li>
+                            <li><a href="faq.html" class="font-Poppins font-normal md:text-lg text-base leading-7 text-primaryColor text-opacity-60 md:pt-6 pt-4 block hover:text-btnBg hover:transition-all hover:ease-in-out hover:duration-500">FAQs</a></li>
+                        </ul>
+                    </div>
+                    <div class="md:mt-0 mt-5">
+                        <h5 class="font-Poppins font-semibold text-lg leading-8 text-primaryColor">Product</h5>
+                        <ul class="mt-6">
+                            <li><a href="#" onclick="event.preventDefault()" class="font-Poppins font-normal md:text-lg text-base leading-7 text-primaryColor text-opacity-60 block hover:text-btnBg hover:transition-all hover:ease-in-out hover:duration-500">Pricing</a></li>
+                            <li><a href="#" onclick="event.preventDefault()" class="font-Poppins font-normal md:text-lg text-base leading-7 text-primaryColor text-opacity-60 md:pt-6 pt-4 block hover:text-btnBg hover:transition-all hover:ease-in-out hover:duration-500">Help Center</a></li>
+                            <li><a href="#" onclick="event.preventDefault()" class="font-Poppins font-normal md:text-lg text-base leading-7 text-primaryColor text-opacity-60 md:pt-6 pt-4 block hover:text-btnBg hover:transition-all hover:ease-in-out hover:duration-500">Blog</a></li>
+                            <li><a href="#" onclick="event.preventDefault()" class="font-Poppins font-normal md:text-lg text-base leading-7 text-primaryColor text-opacity-60 md:pt-6 pt-4 block hover:text-btnBg hover:transition-all hover:ease-in-out hover:duration-500">Careers</a></li>
+                        </ul>
+                    </div>
+                    <div class="md:mt-0 mt-5">
+                        <h5 class="font-Poppins font-semibold text-lg leading-8 text-primaryColor">Legal</h5>
+                        <ul class="mt-6">
+                            <li><a href="#" onclick="event.preventDefault()" class="font-Poppins font-normal md:text-lg text-base leading-7 text-primaryColor text-opacity-60 block hover:text-btnBg hover:transition-all hover:ease-in-out hover:duration-500">Terms of Use</a></li>
+                            <li><a href="#" onclick="event.preventDefault()" class="font-Poppins font-normal md:text-lg text-base leading-7 text-primaryColor text-opacity-60 md:pt-6 pt-4 block hover:text-btnBg hover:transition-all hover:ease-in-out hover:duration-500">Privacy Policy</a></li>
+                            <li><a href="#"  onclick="event.preventDefault()" class="font-Poppins font-normal md:text-lg text-base leading-7 text-primaryColor text-opacity-60 md:pt-6 pt-4 block hover:text-btnBg hover:transition-all hover:ease-in-out hover:duration-500">Link 03</a></li>
+                            <li><a href="#" onclick="event.preventDefault()" class="font-Poppins font-normal md:text-lg text-base leading-7 text-primaryColor text-opacity-60 md:pt-6 pt-4 block hover:text-btnBg hover:transition-all hover:ease-in-out hover:duration-500">Link 04</a></li>
+                        </ul>
+                    </div>
+                    <div class="md:w-auto w-full md:mt-0 mt-5">
+                        <h5 class="font-Poppins font-semibold text-lg leading-8 text-primaryColor">Key Resources</h5>
+                        <ul class="mt-6">
+                            <li><a href="#"  onclick="event.preventDefault()" class="font-Poppins font-normal md:text-lg text-base leading-7 text-primaryColor text-opacity-60 block hover:text-btnBg hover:transition-all hover:ease-in-out hover:duration-500">SEO Ranking Factors</a></li>
+                            <li><a href="#"  onclick="event.preventDefault()" class="font-Poppins font-normal md:text-lg text-base leading-7 text-primaryColor text-opacity-60 md:pt-6 pt-4 block hover:text-btnBg hover:transition-all hover:ease-in-out hover:duration-500">Onpage SEO Checklist</a></li>
+                            <li><a href="#"  onclick="event.preventDefault()" class="font-Poppins font-normal md:text-lg text-base leading-7 text-primaryColor text-opacity-60 md:pt-6 pt-4 block hover:text-btnBg hover:transition-all hover:ease-in-out hover:duration-500">SEO Glossary</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <hr class="w-full h-[1px] bg-primaryColor bg-opacity-10"/>
+            <div class="mt-9 xl:px-0 px-4">
+                <div class="flex md:flex-row flex-col justify-between items-center">
+                    <div>
+                        <p class="font-Poppins font-normal text-base leading-6 text-primaryColor text-opacity-50 text-center">&copy; clickrank.ai. All Rights Reserved.</p>
+                    </div>
+                    <div class="flex gap-3.5 lg:mt-0 mt-5">
+                        <a href="https://www.facebook.com/" target="_blank">
+                            <svg class="group border border-primaryColor border-opacity-20 bg-white rounded-full hover:bg-primaryColor hover:transition-all hover: ease-in-out hover:duration-500" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+                                <path d="M21.4758 18.8746L21.8908 16.341H19.2968V14.6969C19.2968 14.0039 19.659 13.3279 20.8209 13.3279H22V11.1711C22 11.1711 20.9301 11 19.9069 11C17.7708 11 16.3746 12.2136 16.3746 14.4103V16.3414H14V18.875H16.3746V25H19.2968V18.875L21.4758 18.8746Z" fill="black" class="group-hover:fill-white group-hover:transition-all group-hover: ease-in-out group-hover:duration-500"/>
+                            </svg>
+                        </a>
+                        
+                        <a href="https://www.instagram.com/" target="_blank">
+                            <svg class="group border border-primaryColor border-opacity-20 bg-white rounded-full hover:bg-primaryColor hover:transition-all hover: ease-in-out hover:duration-500" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+                                <path d="M18.0001 11C16.099 11 15.8606 11.0081 15.114 11.0421C14.3689 11.0761 13.86 11.1945 13.4148 11.3675C12.9544 11.5464 12.5641 11.7857 12.1749 12.1749C11.7857 12.564 11.5464 12.9545 11.3675 13.4148C11.1944 13.86 11.0761 14.3689 11.0421 15.114C11.008 15.8606 11 16.099 11 18.0001C11 19.9012 11.008 20.1396 11.0421 20.8863C11.0761 21.6313 11.1944 22.1402 11.3675 22.5854C11.5464 23.0458 11.7858 23.4361 12.1749 23.8253C12.5641 24.2145 12.9544 24.4539 13.4148 24.6328C13.86 24.8058 14.3689 24.9241 15.114 24.9581C15.8606 24.9922 16.099 25.0002 18.0001 25.0002C19.9012 25.0002 20.1396 24.9922 20.8863 24.9581C21.6313 24.9241 22.1402 24.8058 22.5854 24.6328C23.0458 24.4539 23.4361 24.2145 23.8253 23.8253C24.2145 23.4361 24.4539 23.0458 24.6328 22.5854C24.8058 22.1402 24.9241 21.6313 24.9581 20.8863C24.9922 20.1396 25.0002 19.9012 25.0002 18.0001C25.0002 16.099 24.9922 15.8606 24.9581 15.114C24.9241 14.3689 24.8058 13.86 24.6328 13.4148C24.4539 12.9545 24.2145 12.564 23.8253 12.1749C23.4361 11.7857 23.0458 11.5464 22.5854 11.3675C22.1402 11.1945 21.6313 11.0761 20.8863 11.0421C20.1396 11.0081 19.9012 11 18.0001 11ZM18.0001 12.2613C19.8692 12.2613 20.0906 12.2684 20.8288 12.3021C21.5113 12.3332 21.8819 12.4473 22.1286 12.5431C22.4553 12.6701 22.6885 12.8218 22.9335 13.0667C23.1784 13.3117 23.3301 13.5449 23.4571 13.8716C23.553 14.1183 23.667 14.489 23.6981 15.1715C23.7318 15.9096 23.739 16.131 23.739 18.0001C23.739 19.8692 23.7318 20.0906 23.6981 20.8288C23.667 21.5113 23.553 21.8819 23.4571 22.1286C23.3301 22.4553 23.1784 22.6885 22.9335 22.9335C22.6885 23.1784 22.4553 23.3301 22.1286 23.4571C21.8819 23.553 21.5113 23.667 20.8288 23.6981C20.0907 23.7318 19.8694 23.739 18.0001 23.739C16.1309 23.739 15.9095 23.7318 15.1715 23.6981C14.4889 23.667 14.1183 23.553 13.8717 23.4571C13.5449 23.3301 13.3117 23.1784 13.0668 22.9335C12.8218 22.6885 12.6701 22.4553 12.5431 22.1286C12.4473 21.8819 12.3332 21.5113 12.3021 20.8288C12.2684 20.0906 12.2613 19.8692 12.2613 18.0001C12.2613 16.131 12.2684 15.9096 12.3021 15.1715C12.3332 14.4889 12.4473 14.1183 12.5431 13.8717C12.6701 13.5449 12.8218 13.3117 13.0667 13.0668C13.3117 12.8218 13.5449 12.6701 13.8716 12.5431C14.1183 12.4473 14.489 12.3332 15.1715 12.3021C15.9096 12.2684 16.131 12.2613 18.0001 12.2613" fill="black" class="group-hover:fill-white group-hover:transition-all group-hover: ease-in-out group-hover:duration-500"/>
+                                <path d="M18.0004 20.3339C16.7117 20.3339 15.667 19.2892 15.667 18.0006C15.667 16.7118 16.7117 15.6672 18.0004 15.6672C19.2891 15.6672 20.3338 16.7118 20.3338 18.0006C20.3338 19.2892 19.2891 20.3339 18.0004 20.3339ZM18.0004 14.4059C16.0151 14.4059 14.4058 16.0152 14.4058 18.0006C14.4058 19.9858 16.0151 21.5952 18.0004 21.5952C19.9857 21.5952 21.5951 19.9858 21.5951 18.0006C21.5951 16.0152 19.9857 14.4059 18.0004 14.4059ZM22.5771 14.2639C22.5771 14.7278 22.201 15.1039 21.7371 15.1039C21.2732 15.1039 20.8971 14.7278 20.8971 14.2639C20.8971 13.7999 21.2732 13.4238 21.7371 13.4238C22.201 13.4238 22.5771 13.7999 22.5771 14.2639Z" fill="black" class="group-hover:fill-white group-hover:transition-all group-hover: ease-in-out group-hover:duration-500"/>
+                            </svg>
+                        </a>
+                        
+                        <a href="https://twitter.com/" target="_blank">
+                            <svg class="group border border-primaryColor border-opacity-20 bg-white rounded-full hover:bg-primaryColor hover:transition-all hover: ease-in-out hover:duration-500" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+                                <path d="M25 13.4205C24.4758 13.6655 23.9197 13.8263 23.3503 13.8975C23.9434 13.5226 24.3988 12.9289 24.6132 12.2215C24.0494 12.5744 23.4326 12.823 22.7893 12.9567C22.2654 12.3679 21.5189 12 20.6928 12C19.1065 12 17.8204 13.3564 17.8204 15.0293C17.8204 15.2668 17.8458 15.498 17.8948 15.7198C15.5077 15.5934 13.3913 14.3874 11.9746 12.5545C11.7274 13.002 11.5858 13.5224 11.5858 14.0775C11.5858 15.1285 12.0929 16.0557 12.8635 16.599C12.4074 16.584 11.9613 16.454 11.5625 16.2201C11.5624 16.2328 11.5624 16.2454 11.5624 16.2582C11.5624 17.726 12.5524 18.9504 13.8663 19.2287C13.4434 19.35 12.9997 19.3678 12.5693 19.2806C12.9347 20.4841 13.9955 21.3599 15.2523 21.3845C14.2693 22.1969 13.0308 22.6813 11.6852 22.6813C11.4533 22.6813 11.2247 22.6669 11 22.6389C12.2711 23.4985 13.7809 24 15.4029 24C20.6861 24 23.5751 19.3838 23.5751 15.3807C23.5751 15.2493 23.5723 15.1186 23.5668 14.9887C24.1291 14.56 24.6144 14.0289 25 13.4205Z" fill="black" class="group-hover:fill-white group-hover:transition-all group-hover: ease-in-out group-hover:duration-500"/>
+                            </svg>
+                        </a>
+                        
+                        <a href="https://www.linkedin.com/" target="_blank">
+                            <svg class="group border border-primaryColor border-opacity-20 bg-white rounded-full hover:bg-primaryColor hover:transition-all hover: ease-in-out hover:duration-500" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M16.2003 15.8783H18.8001V17.1733C19.1746 16.4285 20.135 15.7593 21.5777 15.7593C24.3434 15.7593 25 17.2419 25 19.9621V25H22.2V20.5816C22.2 19.0325 21.8255 18.1589 20.8721 18.1589C19.5498 18.1589 19.0003 19.1004 19.0003 20.5809V25H16.2003V15.8783ZM11.399 24.881H14.199V15.7593H11.399V24.881ZM14.6001 12.785C14.6002 13.0197 14.5537 13.2521 14.4632 13.4686C14.3727 13.6852 14.2401 13.8816 14.073 14.0464C13.7345 14.3828 13.2763 14.5712 12.799 14.57C12.3226 14.5697 11.8654 14.3818 11.5264 14.0471C11.3599 13.8817 11.2278 13.6851 11.1374 13.4685C11.0471 13.2519 11.0004 13.0197 11 12.785C11 12.3111 11.189 11.8575 11.5271 11.5229C11.8658 11.1877 12.3232 10.9998 12.7997 11C13.2771 11 13.7349 11.1883 14.073 11.5229C14.4104 11.8575 14.6001 12.3111 14.6001 12.785Z" fill="black" class="group-hover:fill-white group-hover:transition-all group-hover: ease-in-out group-hover:duration-500"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer Area End Here -->
+      
+
+    <script src="assets/js/alpine.min.js"  defer></script>
+
+    <!-- AOS Animation-->
+    <script src="assets/js/aos.js"></script>
+    <script src="assets/js/aos_script.js"></script>
+    <script src="assets/js/timeline.js"></script>
+    <script src="assets/js/script.js"></script>
+
+</body>
+</html>
